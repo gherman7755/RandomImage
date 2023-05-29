@@ -3,11 +3,9 @@ import random
 from PIL import Image
 import time
 
-  
-
 def getRandomPhoto(files, path):
     choice = random.choice(files)
-    if choice != "Completed":
+    if choice != "Completed" and choice != "bmp" and choice != "main.py" and choice != ".gitignore":
         imagePath = path + "\\" + choice
     return imagePath, choice
 
@@ -45,7 +43,10 @@ def saverClose(path):
         imagePath, choice = getRandomPhoto(files, path)
         
         f = Image.open(imagePath)
+
         bmp = choice.replace("png", "bmp")
+
+        bmp = '.\\bmp\\' + bmp
         
         f.save(bmp)
         
@@ -71,6 +72,4 @@ if __name__ == "__main__":
     # Dangerous Close - closing image by killing PhotoApp.exe proccess
     # dangerousClose("C:\\Users\\Legion\\Downloads\\patterns")
     # Saver Close - closing image using matplotlib, creates bmps files
-    saverClose("C:\\Users\\Legion\\Downloads\\patterns")
-    
-    
+    saverClose("C:\\Users\\Magpie\\Desktop\\patterns")
