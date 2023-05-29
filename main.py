@@ -3,6 +3,15 @@ import random
 from PIL import Image
 import time
 
+import configparser
+
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+COMPONENTS_PATH = config['DIRs']['COMPONENTS_PATH']
+BLANK_PATH = config['DIRs']['BLANK_PATH']
+
 forbiddenNames = [
     'Completed',
     'Components',
@@ -12,7 +21,13 @@ forbiddenNames = [
     '.git',
     '.idea',
     'components.json',
+    'config.ini',
 ]
+
+
+BMP_PATH = __file__.replace("main.py", "bmp")
+if not os.path.exists(BMP_PATH):
+    os.makedirs(BMP_PATH)
 
 
 def outputAnswer(choice):
@@ -71,7 +86,6 @@ def saverClose(path):
         f = Image.open(imagePath)
 
         bmp = choice.replace("png", "bmp")
-
         bmp = '.\\bmp\\' + bmp
 
         f.save(bmp)
@@ -124,7 +138,6 @@ def components(path):
         f = Image.open(imagePath)
 
         bmp = choice.replace("png", "bmp")
-
         bmp = '.\\bmp\\' + bmp
 
         f.save(bmp)
@@ -151,7 +164,8 @@ if __name__ == "__main__":
                  '2. + Components\' names\n'))
 
     if mode == 1:
-        saverClose("C:\\Users\\Magpie\\Desktop\\a\\Blank")
+        saverClose(BLANK_PATH)
 
     if mode == 2:
-        components("C:\\Users\\Magpie\\Desktop\\a\\Components")
+        components(COMPONENTS_PATH)
+
