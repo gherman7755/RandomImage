@@ -13,6 +13,18 @@ forbiddenNames = [
 ]
 
 
+def outputAnswer(choice):
+    
+    answer = input("Enter Answer: ")
+    
+    if answer.capitalize() in choice:
+        print(f"Yes, it is {choice}")
+    else:
+        print(f"No, it is: {choice}")
+    
+    print("-"*20)
+
+
 def getRandomPhoto(files, path):
     choice = random.choice(files)
 
@@ -39,12 +51,8 @@ def dangerousClose(path):
         im.load()
 
         im.show()
-        answer = input("Enter Answer: ")
 
-        if answer in choice:
-            print(f"Yes, it is {choice}")
-        else:
-            print(f"No, it is: {choice}")
+        outputAnswer(choice)
 
         time.sleep(1)
         subprocess.run(['taskkill', '/f', '/im', "PhotosApp.exe"])
@@ -73,19 +81,14 @@ def saverClose(path):
         plt.ion()  # Ion
         plt.show()
 
-        answer = input("Enter Answer: ")
+        outputAnswer(choice)
 
-        if answer.capitalize() in choice:
-            print(f"Yes it is {choice}")
-        else:
-            print(f"It is: {choice}")
-
-        print("-" * 20)
         plt.close()
 
 
 if __name__ == "__main__":
     # Dangerous Close - closing image by killing PhotoApp.exe proccess
     # dangerousClose("C:\\Users\\Legion\\Downloads\\patterns")
+    
     # Saver Close - closing image using matplotlib, creates bmps files
     saverClose("C:\\Users\\Magpie\\Desktop\\a")
