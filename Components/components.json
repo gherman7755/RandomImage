@@ -1,0 +1,140 @@
+{
+  "AbstractFactory.png" : {
+    "A": "AbstractFactory",
+    "B": "ConcreteFactory1",
+    "C": "ConcreteFactory2",
+    "D": "AbstractProductA",
+    "E": "ProductA2",
+    "F": "ProductA1",
+    "G": "AbstractProductB",
+    "H": "ProductB2",
+    "I": "ProductB1",
+    "J": "Client"
+  },
+  "Adapter.png" : {
+    "A": "Client",
+    "B": "Target",
+    "C": "Adaptee",
+    "D": "Adapter"
+  },
+  "Bridge.png" : {
+    "A": "Abstraction",
+    "B": "RefinedAbstraction",
+    "C": "Implementor",
+    "D": "ConcreteImplementorA",
+    "E": "ConcreteImplementorB"
+  },
+  "Builder.png" : {
+    "A": "Director",
+    "B": "Builder",
+    "C": "ConcreteBuilder",
+    "D": "Product"
+  },
+  "ChainOfResponsibility.png" : {
+    "A": "Client",
+    "B": "Handler",
+    "C": "ConcreteHangler1",
+    "D": "ConcreteHangler2"
+  },
+  "Command.png" : {
+    "A": "Client",
+    "B": "Invoker",
+    "C": "Command",
+    "D": "Receiver",
+    "E": "ConcreteCommand"
+  },
+  "Composite.png" : {
+    "A": "Client",
+    "B": "Component",
+    "C": "Leaf",
+    "D": "Composite"
+  },
+  "Decorator.png" : {
+    "A": "Component",
+    "B": "ConcreteComponent",
+    "C": "Decorator",
+    "D": "ConcreteDecoratorA",
+    "E": "ConcreteDecoratorB"
+  },
+  "Facade.png" : {
+    "A": "Facade",
+    "B": "Subsystem Classes"
+  },
+  "FactoryMethod.png" : {
+    "A": "Product",
+    "B": "ConcreteProduct",
+    "C": "Creator",
+    "D": "ConcreteCreator"
+  },
+  "Flyweight.png" : {
+    "A": "FlyweightFactory",
+    "B": "Flyweight",
+    "C": "Client",
+    "D": "ConcreteFlyweight",
+    "E": "UnsharedConcreteFlyweight"
+  },
+  "Iterator.png" : {
+    "A": "Aggregate",
+    "B": "Iterator",
+    "C": "ConcreteAggregate",
+    "D": "ConcreteIterator"
+  },
+  "Mediator.png" : {
+    "A": "Mediator",
+    "B": "Colleague",
+    "C": "ConcreteMediator",
+    "D": "ConcreteColleague1",
+    "E": "ConcreteColleague2"
+  },
+  "Memento.png" : {
+    "A": "Originator",
+    "B": "Memento",
+    "C": "Caretaker"
+  },
+  "Observer.png" : {
+    "A": "Subject",
+    "B": "Observer",
+    "C": "ConcreteSubject",
+    "D": "ConcreteObserver"
+  },
+  "Prototype.png" : {
+    "A": "Client",
+    "B": "Prototype",
+    "C": "ConcretePrototype1",
+    "D": "ConcretePrototype2"
+  },
+  "Proxy.png" : {
+    "A": "Subject",
+    "B": "RealSubject",
+    "C": "Proxy"
+  },
+  "Singleton.png" : {
+    "A": "Singleton"
+  },
+  "State.png" : {
+    "A": "Context",
+    "B": "State",
+    "C": "ConcreteStateA",
+    "D": "ConcreteStateB"
+  },
+  "Strategy.png" : {
+    "A": "Context",
+    "B": "Strategy",
+    "C": "ConcreteStrategyA",
+    "D": "ConcreteStrategyB",
+    "E": "ConcreteStrategyC"
+  },
+  "TemplateMethod.png" : {
+    "A": "AbstractClass",
+    "B": "ConcreteClass"
+  },
+  "Visitor.png" : {
+    "A": "Visitor",
+    "B": "ConcreteVisitor1",
+    "C": "ConcreteVisitor2",
+    "D": "ObjectStructure",
+    "E": "Element",
+    "F": "ConcreteElementA",
+    "G": "ConcreteElementB"
+  }
+}
