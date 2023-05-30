@@ -71,7 +71,16 @@ def dangerousClose(path):
         outputAnswer(choice)
 
         time.sleep(1)
-        subprocess.run(['taskkill', '/f', '/im', "PhotosApp.exe"])
+
+        # Check if "PhotosApp.exe" is running
+        proc = subprocess.run(['tasklist', '/fi', 'IMAGENAME eq PhotosApp.exe'], capture_output=True)
+        if proc.stdout and b'PhotosApp.exe' in proc.stdout:
+            subprocess.run(['taskkill', '/f', '/im', 'PhotosApp.exe'])
+
+        # Check if "Microsoft.Photos.exe" is running
+        proc = subprocess.run(['tasklist', '/fi', 'IMAGENAME eq Microsoft.Photos.exe'], capture_output=True)
+        if proc.stdout and b'Microsoft.Photos.exe' in proc.stdout:
+            subprocess.run(['taskkill', '/f', '/im', 'Microsoft.Photos.exe'])
 
 
 def saverClose(path):
@@ -155,7 +164,7 @@ def components(path):
 
 if __name__ == "__main__":
     # Dangerous Close - closing image by killing PhotoApp.exe proccess
-    # dangerousClose("C:\\Users\\Legion\\Downloads\\patterns")
+    # dangerousClose("C:\\Users\\Nick-V-PC\\Documents\\GitHub\\RandomImage\\Blank")
 
     # Saver Close - closing image using matplotlib, creates bmps files
 
